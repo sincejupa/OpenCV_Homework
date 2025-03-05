@@ -3,7 +3,7 @@ import sys
 import numpy as np
 
 # 이미지 불러오기
-img = cv.imread("C:/Users/win/Desktop/soccer.jpg")
+img = cv.imread("soccer.jpg")
 
 # 이미지가 정상적으로 로드되었는지 확인
 if img is None:
