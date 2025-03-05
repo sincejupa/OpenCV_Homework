@@ -43,8 +43,9 @@ while True:
         cv2.imshow("Image", img_copy)
 
     elif key == ord("s") and roi is not None:  # s 키를 누르면 ROI 저장
-        cv2.imwrite("roi.jpg", roi)
-        print("ROI 저장 완료: roi.jpg")
+        if roi is not None and roi.size > 0:
+            cv2.imwrite("roi.jpg", roi)
+            print("ROI 저장 완료: roi.jpg")
 
     elif key == 27:  # ESC 키를 누르면 종료
         break
